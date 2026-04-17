@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "guardrly"
+version = "0.1.2"
+description = "Non-invasive AI Agent operation monitoring - MCP Server"
+authors = ["Guardrly <hello@guardrly.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://guardrly.com"
+repository = "https://github.com/fishcoco-code/guardrly-mcp"
+documentation = "https://guardrly.com/docs"
+keywords = ["mcp", "ai-agent", "monitoring", "shopify", "meta-ads"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+]
+packages = [
+    { include = "mcp_server" },
+    { include = "guardrly" },
+]
+
+[tool.poetry.scripts]
+guardrly = "guardrly.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mcp = "*"
+python-dotenv = "*"
+httpx = ">=0.27"
+aiosqlite = "*"
+anyio = ">=4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

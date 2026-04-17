@@ -1,0 +1,352 @@
+[
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/products/(\\d+)$",
+    "label": "Delete product {id}",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/products/(\\d+)/images/(\\d+)$",
+    "label": "Delete product image",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/products/(\\d+)$",
+    "label": "Update product details",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/products/(\\d+)/variants/(\\d+)$",
+    "label": "Update product variant price/inventory",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/products$",
+    "label": "Create new product",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/orders/(\\d+)$",
+    "label": "Delete order record",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/orders/(\\d+)/refunds$",
+    "label": "Create order refund",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/orders/(\\d+)/fulfillments$",
+    "label": "Create order fulfillment",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/orders/(\\d+)/fulfillments/(\\d+)$",
+    "label": "Update order fulfillment",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/orders/(\\d+)/cancel$",
+    "label": "Cancel order {id}",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/draft_orders$",
+    "label": "Create draft order",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/draft_orders/(\\d+)$",
+    "label": "Update draft order",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/inventory_levels/adjust$",
+    "label": "Adjust inventory level",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/inventory_levels/set$",
+    "label": "Set inventory level to specific quantity",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/inventory_levels$",
+    "label": "Delete inventory level for location",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/inventory_items/(\\d+)$",
+    "label": "Update inventory item (SKU/tracking)",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/locations/(\\d+)/inventory_levels/connect$",
+    "label": "Connect inventory level to location",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/price_rules$",
+    "label": "Create price rule (discount)",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/price_rules/(\\d+)$",
+    "label": "Delete price rule",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/price_rules/(\\d+)/discount_codes$",
+    "label": "Create discount code",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/price_rules/(\\d+)/discount_codes/(\\d+)$",
+    "label": "Delete discount code",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/price_rules/(\\d+)$",
+    "label": "Update price rule",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/webhooks$",
+    "label": "Create webhook (potential data exfiltration risk)",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/webhooks/(\\d+)$",
+    "label": "Delete webhook subscription",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/webhooks/(\\d+)$",
+    "label": "Update webhook endpoint",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/shop$",
+    "label": "Modify store settings",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/policies/(\\d+)$",
+    "label": "Update store policy",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/shipping_zones$",
+    "label": "Create shipping zone",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/shipping_zones/(\\d+)$",
+    "label": "Delete shipping zone",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/payment_gateways/(\\d+)$",
+    "label": "Update payment gateway configuration",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/customers/(\\d+)$",
+    "label": "Delete customer record",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/customers/(\\d+)$",
+    "label": "Update customer data",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/customers$",
+    "label": "Create new customer",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/customers/(\\d+)/account_activation_url$",
+    "label": "Generate customer account activation URL",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/customers/(\\d+)/addresses/(\\d+)$",
+    "label": "Delete customer address",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/custom_collections/(\\d+)$",
+    "label": "Delete custom collection",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/custom_collections/(\\d+)$",
+    "label": "Update custom collection",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/custom_collections$",
+    "label": "Create custom collection",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/smart_collections/(\\d+)$",
+    "label": "Delete smart collection",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/collects/(\\d+)$",
+    "label": "Update product-collection association",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/themes/(\\d+)$",
+    "label": "Delete theme",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/themes/(\\d+)$",
+    "label": "Update/publish theme",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/themes/(\\d+)/assets$",
+    "label": "Delete theme asset file",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/themes/(\\d+)/assets$",
+    "label": "Update theme asset file",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/themes$",
+    "label": "Create/upload new theme",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/metafields/(\\d+)$",
+    "label": "Delete metafield",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "PUT",
+    "pattern": "PUT /admin/api/.*/metafields/(\\d+)$",
+    "label": "Update metafield value",
+    "risk_level": 2
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/metafields$",
+    "label": "Create metafield",
+    "risk_level": 1
+  },
+  {
+    "platform": "shopify",
+    "method": "DELETE",
+    "pattern": "DELETE /admin/api/.*/script_tags/(\\d+)$",
+    "label": "Delete script tag",
+    "risk_level": 3
+  },
+  {
+    "platform": "shopify",
+    "method": "POST",
+    "pattern": "POST /admin/api/.*/script_tags$",
+    "label": "Create script tag (potential XSS risk)",
+    "risk_level": 3
+  }
+]

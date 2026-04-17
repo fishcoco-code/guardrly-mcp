@@ -1,0 +1,61 @@
+[
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/campaigns$",           "label": "Create campaign (draft)",                         "risk_level": 1},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/campaigns",           "label": "Bulk delete campaigns",                           "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+$",                          "label": "Update ad object status or fields (pause/resume)", "risk_level": 2},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/\\d+$",                        "label": "Delete campaign / adset / ad by ID",               "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/copies$",                   "label": "Duplicate campaign / adset / ad",                  "risk_level": 1},
+
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adsets$",               "label": "Create ad set",                                   "risk_level": 1},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/adsets",              "label": "Bulk delete ad sets",                             "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/budget_schedule$",          "label": "Update ad set budget schedule",                   "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adsets/\\d+$",          "label": "Update ad set targeting or bid",                  "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/adlabels$",                 "label": "Add label to ad object",                          "risk_level": 1},
+
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/ads$",                  "label": "Create ad",                                       "risk_level": 1},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/ads",                 "label": "Bulk delete ads",                                 "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/creative$",                 "label": "Update ad creative",                              "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/ads/\\d+$",             "label": "Update ad status",                                "risk_level": 2},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/\\d+/adlabels",                "label": "Remove label from ad object",                     "risk_level": 2},
+
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/\\d+/users$",                  "label": "Remove users from custom audience",                "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/customaudiences$",      "label": "Create custom audience",                          "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/users$",                    "label": "Add users to custom audience",                    "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/usersreplace$",             "label": "Replace custom audience user list",               "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/customaudiences$",          "label": "Update custom audience settings",                 "risk_level": 2},
+
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adspixels$",            "label": "Create Meta Pixel",                               "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/shared_accounts$",          "label": "Share pixel with ad account",                     "risk_level": 3},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/\\d+/shared_accounts",         "label": "Unshare pixel from ad account",                   "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/events$",                   "label": "Send pixel events (server-side)",                 "risk_level": 2},
+  {"platform": "meta", "method": "GET",    "pattern": "GET /v[\\d.]+/\\d+/stats$",                     "label": "Read pixel stats",                                "risk_level": 0},
+
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/adcreatives",         "label": "Bulk delete ad creatives",                        "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adcreatives$",          "label": "Create ad creative",                              "risk_level": 1},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adimages$",             "label": "Upload ad image",                                 "risk_level": 1},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/advideos$",             "label": "Upload ad video",                                 "risk_level": 1},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/thumbnails$",               "label": "Update ad video thumbnail",                       "risk_level": 1},
+
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/budget_schedules$",         "label": "Create campaign budget schedule",                 "risk_level": 2},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/\\d+/budget_schedules",        "label": "Delete campaign budget schedule",                 "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adspaymentmethods$",    "label": "Add payment method to ad account",                "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/advertisable_applications$", "label": "Update ad account spending limit",           "risk_level": 2},
+  {"platform": "meta", "method": "GET",    "pattern": "GET /v[\\d.]+/act_\\d+/adspend$",               "label": "Read ad account spend summary",                   "risk_level": 0},
+
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/userpermissions$",          "label": "Modify business user permissions",                "risk_level": 3},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/\\d+/userpermissions",         "label": "Remove business user permissions",                "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/users$",                "label": "Add user to ad account",                          "risk_level": 3},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/users",               "label": "Remove user from ad account",                     "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/owned_ad_accounts$",        "label": "Assign ad account to business",                   "risk_level": 3},
+
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/adrules",             "label": "Delete ad automation rule",                       "risk_level": 3},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adrules$",              "label": "Create ad automation rule",                       "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/execute$",                  "label": "Manually execute automation rule",                "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/adrules/evaluate$",     "label": "Evaluate ad automation rules",                    "risk_level": 1},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/adrulehistory$",            "label": "Get automation rule execution history",           "risk_level": 1},
+
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/reports$",              "label": "Create custom ad report",                         "risk_level": 1},
+  {"platform": "meta", "method": "DELETE", "pattern": "DELETE /v[\\d.]+/act_\\d+/reports",             "label": "Delete custom ad report",                         "risk_level": 2},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/act_\\d+/insights$",             "label": "Request ad account insights (async)",             "risk_level": 1},
+  {"platform": "meta", "method": "POST",   "pattern": "POST /v[\\d.]+/\\d+/insights$",                 "label": "Request object-level insights (async)",           "risk_level": 1},
+  {"platform": "meta", "method": "GET",    "pattern": "GET /v[\\d.]+/\\d+/reportruns$",                "label": "Check async report run status",                   "risk_level": 0}
+]
