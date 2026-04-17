@@ -1,0 +1,41 @@
+name: guardrly
+title: Guardrly
+description: Non-invasive AI Agent operation monitoring — audit every API call your agent makes to Shopify, Meta Ads, and more.
+icon: https://guardrly.com/favicon.ico
+version: 0.1.3
+license: MIT
+homepage: https://guardrly.com
+repository: https://github.com/fishcoco-code/guardrly-mcp
+
+runtime:
+  type: python
+  command: python3
+  args: ["-m", "guardrly"]
+
+configSchema:
+  type: object
+  required:
+    - GUARDRLY_API_KEY
+    - HMAC_SECRET
+  properties:
+    GUARDRLY_API_KEY:
+      type: string
+      title: Guardrly API Key
+      description: Your Guardrly API key from app.guardrly.com/settings
+    GUARDRLY_API_URL:
+      type: string
+      title: Guardrly API URL
+      description: Guardrly API endpoint
+      default: https://api.guardrly.com
+    HMAC_SECRET:
+      type: string
+      title: HMAC Secret
+      description: Your HMAC secret from app.guardrly.com/settings MCP Configuration
+
+tags:
+  - monitoring
+  - security
+  - observability
+  - shopify
+  - meta-ads
+  - audit-log
