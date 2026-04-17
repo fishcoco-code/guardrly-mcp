@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.fishcoco-code/guardrly-mcp",
+  "description": "Non-invasive AI Agent operation monitoring — audit every API call your agent makes to Shopify, Meta Ads, and more",
+  "repository": {
+    "url": "https://github.com/fishcoco-code/guardrly-mcp",
+    "source": "github"
+  },
+  "version_detail": {
+    "version": "0.1.2"
+  },
+  "packages": [
+    {
+      "registry_name": "pypi",
+      "name": "guardrly",
+      "version": "0.1.2",
+      "package_arguments": [],
+      "environment_variables": [
+        {
+          "name": "GUARDRLY_API_KEY",
+          "description": "Your Guardrly API key from app.guardrly.com/settings"
+        },
+        {
+          "name": "GUARDRLY_API_URL",
+          "description": "Guardrly API endpoint",
+          "default": "https://api.guardrly.com"
+        },
+        {
+          "name": "HMAC_SECRET",
+          "description": "Your HMAC secret from app.guardrly.com/settings MCP Configuration panel"
+        }
+      ]
+    }
+  ]
+}
